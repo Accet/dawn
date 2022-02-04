@@ -207,6 +207,7 @@
                           {% render 'icon-minus' %}
                         </button>
                         <input class="quantity__input"
+                          data-tbyb="quantity-control" 
                           type="number"
                           name="updates[]"
                           value="{{ item.quantity }}"
@@ -215,7 +216,7 @@
                           id="Quantity-{{ item.index | plus: 1 }}"
                           data-index="{{ item.index | plus: 1 }}"
                         >
-                        <button class="quantity__button no-js-hidden" name="plus" type="button">
+                        <button data-tbyb="quantity-control" class="quantity__button no-js-hidden" name="plus" type="button">
                           <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
                           {% render 'icon-plus' %}
                         </button>
