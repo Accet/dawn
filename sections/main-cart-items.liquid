@@ -262,12 +262,12 @@
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end">
+                          <dd data-tbyb="tbyb-total-line" class="price price--end">
                             {{ item.final_line_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
-                        <span class="price price--end">
+                        <span data-tbyb="tbyb-total-line" class="price price--end">
                           {{ item.original_line_price | money }}
                         </span>
                       {%- endif -%}
