@@ -1,6 +1,6 @@
 {%- if cart != empty -%}
   {%- for item in cart.items -%}
-    <div id="cart-notification-product-{{ item.id }}" class="cart-item">
+    <div id="cart-notification-product-{{ item.id }}" class="cart-item" data-tbyb="tbyb-minicart-line-item">
       {%- if item.image -%}
         <div class="cart-notification-product__image global-media-settings">
           <img
@@ -12,7 +12,7 @@
           >
         </div>
       {%- endif -%}
-      <div>
+      <div >
         <h3 class="cart-notification-product__name h4">{{ item.product.title | escape }}</h3>
           <dl>
             {%- unless item.product.has_only_default_variant -%}
