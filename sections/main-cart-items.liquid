@@ -40,7 +40,10 @@
       </p>
     {%- endif -%}
   </div>
-
+  
+  <!-- Blackcart: Eligibility warning -->
+  <div data-tbyb="tbyb-warning"></div>
+  
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
     <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
       <div class="js-contents">
@@ -57,7 +60,7 @@
 
             <tbody>
               {%- for item in cart.items -%}
-                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                <tr data-tbyb="tbyb-minicart-line-item" class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                   <td class="cart-item__media">
                     {% if item.image %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
