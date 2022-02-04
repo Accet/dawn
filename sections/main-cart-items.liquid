@@ -95,12 +95,12 @@
                         <span class="visually-hidden">
                           {{ 'products.product.price.sale_price' | t }}
                         </span>
-                        <strong class="cart-item__final-price product-option">
+                        <strong data-tbyb="tbyb-cart-line-item" class="cart-item__final-price product-option">
                           {{ item.final_price | money }}
                         </strong>
                       </div>
                     {%- else -%}
-                      <div class="product-option">
+                      <div data-tbyb="tbyb-cart-line-item" class="product-option">
                         {{ item.original_price | money }}
                       </div>
                     {%- endif -%}
