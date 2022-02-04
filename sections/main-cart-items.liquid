@@ -80,7 +80,6 @@
                   </td>
 
                   <td class="cart-item__details">
-                    <div data-tbyb="tbyb-tag"></div>
                     {%- if section.settings.show_vendor -%}
                       <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                     {%- endif -%}
@@ -137,6 +136,7 @@
                           {%- endif -%}
                         {%- endfor -%}
                       </dl>
+                      <div data-tbyb="tbyb-tag"></div>
 
                       <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                     {%- endif -%}
