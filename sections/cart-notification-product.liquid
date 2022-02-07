@@ -2,6 +2,7 @@
 
   {%- for item in cart.items -%}
     <div id="cart-notification-product-{{ item.id }}" class="cart-item" data-tbyb="tbyb-minicart-line-item">
+      <div>
       {%- if item.image -%}
         <div class="cart-notification-product__image global-media-settings">
           <img
@@ -46,6 +47,7 @@
         {%- if item.selling_plan_allocation != nil -%}
           <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
         {%- endif -%}
+      </div>
       </div>
     </div>
   {%- endfor -%}
