@@ -892,7 +892,7 @@ class VariantRadios extends VariantSelects {
 
 customElements.define('variant-radios', VariantRadios);
 
-class TBYBContainer extends HTMLDivElement {
+class TBYBContainer extends HTMLElement {
   constructor() {
     super();
     this.validateVisibility()
