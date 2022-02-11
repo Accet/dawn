@@ -903,4 +903,4 @@ class TBYBContainer extends HTMLDivElemment {
   }
 }
 
-customElements.define('tbyb-rcontaineradios', TBYBContainer);
+customElements.define('tbyb-container', TBYBContainer);
