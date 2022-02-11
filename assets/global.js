@@ -891,3 +891,16 @@ class VariantRadios extends VariantSelects {
 }
 
 customElements.define('variant-radios', VariantRadios);
+
+class TBYBContainer extends HTMLDivElemment {
+  constructor() {
+    super();
+    this.validateVisibility()
+  }
+
+  validateVisibility() {
+	console.log("TBYB", window.tbyb)
+  }
+}
+
+customElements.define('tbyb-rcontaineradios', TBYBContainer);
