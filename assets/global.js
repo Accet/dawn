@@ -903,9 +903,9 @@ class TBYBContainer extends HTMLElement {
       return response.json()
     }).then((result) => {
       if (result?.country !== "US") {
-          this.style.display = "none"      
+//           this.style.display = "none"      
       }
-      console.log("result", result)
+//       console.log("result", result)
     });
   }
 }
