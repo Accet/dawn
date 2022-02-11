@@ -899,14 +899,10 @@ class TBYBContainer extends HTMLElement {
   }
 
   validateVisibility() {
-	console.log("TBYB", window.tbyb)
     fetch("https://ipinfo.io/json").then((response) => {
-    //here you get details in response.
-      console.log("response", response)
       return response.json()
     }).then((result) => {
       if (result?.country !== "US") {
-          console.log(this)
           this.style.display = "none"      
       }
       console.log("result", result)
