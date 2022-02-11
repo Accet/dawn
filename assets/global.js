@@ -900,10 +900,13 @@ class TBYBContainer extends HTMLElement {
 
   validateVisibility() {
 	console.log("TBYB", window.tbyb)
-    $.get("https://ipinfo.io/json", function (response) {
+    fetch("https://ipinfo.io/json").then( function (response) {
     //here you get details in response.
       console.log("response", response)
-}, "jsonp");
+      return response.json()
+    }).then(function (result) {
+      console.log("result", result)
+    });
   }
 }
 
