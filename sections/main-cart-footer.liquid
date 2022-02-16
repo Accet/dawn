@@ -20,9 +20,9 @@
               {% render block %}
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
-                <div class="totals">
-                  <h3 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h3>
-                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+                <div class="totals" data-tbyb="tbyb-cart-total">
+                  <h3 class="totals__subtotal" data-tbyb="tbyb-cart-total__text">{{ 'sections.cart.subtotal' | t }}</h3>
+                  <p class="totals__subtotal-value" data-tbyb="tbyb-cart-total__price">{{ cart.total_price | money_with_currency }}</p>
                 </div>
 
                 <div>
