@@ -892,22 +892,22 @@ class VariantRadios extends VariantSelects {
 
 customElements.define('variant-radios', VariantRadios);
 
-class TBYBContainer extends HTMLElement {
-  constructor() {
-    super();
-    this.validateVisibility()
-  }
+// class TBYBContainer extends HTMLElement {
+//   constructor() {
+//     super();
+//     this.validateVisibility()
+//   }
 
-  validateVisibility() {
-    fetch("https://ipinfo.io/json").then((response) => {
-      return response.json()
-    }).then((result) => {
-      if (result?.country !== "US") {
-//           this.style.display = "none"      
-      }
-//       console.log("result", result)
-    });
-  }
-}
+//   validateVisibility() {
+//     fetch("https://ipinfo.io/json").then((response) => {
+//       return response.json()
+//     }).then((result) => {
+//       if (result?.country !== "US") {
+// //           this.style.display = "none"      
+//       }
+// //       console.log("result", result)
+//     });
+//   }
+// }
 
 customElements.define('tbyb-container', TBYBContainer);
