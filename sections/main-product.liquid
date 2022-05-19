@@ -426,7 +426,7 @@
                     </button>
                     
 <!--                     <tbyb-container data-tbyb="tbyb-button"></tbyb-container> -->
-                    <div data-tbyb="tbyb-button"></div>
+                    <div data-tbyb="tbyb-button" data-tbyb-product="{{product.id}}"></div>
                     
                     {%- if block.settings.show_dynamic_checkout -%}
                       {{ form | payment_button }}
