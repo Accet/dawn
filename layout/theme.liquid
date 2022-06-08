@@ -213,6 +213,22 @@
 	
 <!--     <script type="text/javascript" src="https://staging-static.blackcart.co/dawn-bc-test-eh.myshopify.com.js" defer></script> -->
 
+    <script>
+            window.addEventListener('pageshow', function(event) { 
+//         tbybCustomCartLogic.handleCartSubtotal();
+        document.addEventListener("tbyb_cart_update", function () {
+            debugger;
+//             const allOriginalTotalEls = document.querySelectorAll('[data-tbyb="linen-original-total-el"]');
+// 			console.log('s', {allOriginalTotalEls});
+//             if (window.tbyb && !window.tbyb.validator.isQualified && window.location.pathname.includes('cart')) {
+//               allOriginalTotalEls.forEach(function(el, index) {
+//                 console.log('originalEl', el);
+//               });
+//             }  
+
+          });
+      });
+    </script>
    
   </head>
 
