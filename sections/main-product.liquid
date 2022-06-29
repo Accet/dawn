@@ -404,6 +404,7 @@
 
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+                  <div data-tbyb="tbyb-button">
                   <div class="product-form__buttons">
                     <button
                       type="submit"
@@ -426,7 +427,7 @@
                     </button>
                     
 <!--                     <tbyb-container data-tbyb="tbyb-button"></tbyb-container> -->
-                    <div data-tbyb="tbyb-button" data-tbyb-product="{{product.id}}"></div>
+                    </div>
 <!--                     <div data-tbyb="tbyb-button" ></div> -->
 
                     {%- if block.settings.show_dynamic_checkout -%}
