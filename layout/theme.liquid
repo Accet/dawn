@@ -208,11 +208,41 @@
     }
     </script>
     
-    <script type="text/javascript" src="{{ 'https://localhost:3030/index.js'}}" defer></script>
+    <script data-tbyb-script type="text/javascript" src="{{ 'https://localhost:3030/index.js'}}" defer></script>
     <script type="text/javascript" src="{{ 'http://localhost:3030/index.js'}}" defer></script>
 	
 <!--     <script type="text/javascript" src="https://staging-static.blackcart.co/dawn-bc-test-eh.myshopify.com.js" defer></script> -->
 
+  <script>
+  (function() {class StateService {
+    initResolve;
+    onInit;
+
+    static _instance;
+    blackcart;
+
+    constructor() {
+      this.onInit = new Promise((resolve) => {
+        this.initResolve = resolve;
+      });
+      const lib = document.querySelector('script[data-tbyb-script]');
+      lib.onload = () => {
+        window.tbyb.onInit.then((bc) => {
+          this.blackcart = bc;
+          this.initResolve(bc)
+        })
+      }
+    }
+
+    static getInstance() {
+      if (!StateService._instance) {
+        StateService._instance = new StateService();
+      }
+      return StateService._instance;
+    }
+  }
+})()
+  </script>
    
   </head>
 
