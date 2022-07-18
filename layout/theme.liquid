@@ -241,6 +241,18 @@
       return StateService._instance;
     }
   }
+
+  const state = StateService.getInstance();
+  state.onInit.then(bc => {
+    let features = bc.config.elements.learnMoreModal.features;
+    let featureToCahngeIndex = features.findIndex((item) => item.type === 1);
+    if (featureToCahngeIndex >= 0) {
+      bc.config.elements.learnMoreModal.features[featureToCahngeIndex] = {
+        ...bc.config.elements.learnMoreModal.features[featureToCahngeIndex],
+        imageURL: 'https://www.svgrepo.com/show/189351/running-run.svg'
+      }
+    }
+  })
 })()
   </script>
    
